@@ -101,4 +101,17 @@ describe("test queue implementation", () => {
         expect(q.toString()).toEqual('[40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210]');
     });
 
+    it('checks the size', ()=>{
+        const q = new Queue()
+        q.enqueue(40);
+        q.enqueue(50);
+        q.enqueue(60);
+        q.enqueue(70);
+        q.enqueue(80);
+        q.enqueue(90);
+        q.enqueue(100);
+        q.enqueue(110);
+        expect(q.size()).toEqual(8)
+    })
+
 });
